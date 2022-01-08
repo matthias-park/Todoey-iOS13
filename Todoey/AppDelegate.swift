@@ -23,16 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
 //        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
         
-        let data = Data()
-        data.name = "Junsoo"
-        data.age = 30
-        
         
         do {
             let realm = try Realm()
-            try realm.write {
-                realm.add(data)
-            }
         } catch {
             print("Realm Error \(error)")
         }
